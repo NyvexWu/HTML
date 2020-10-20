@@ -1,0 +1,38 @@
+<style >
+/*To organize CSS tag, this way makes the body code more clean and easier to read*/
+/*this way if we want to change color to all keywords we dont have to change the CSS tag one by one*/
+/*CSS selectors*/
+/*class selector: its unique attribute is that there is a dot(.) in front of the name; this is created specially for CSS; class tag has no limit to how many class selectors you can put in one tag*/
+/*id selector: its unique attirbute is that there is a hash-tag sign(#) in front of the name; this is mainly for javaScript*/
+/*body selector doesnt need anythign before the name; it will apply to body tag, so no calling of the body selector is needed*/
+/*first style tag has the lowest piority, last style has the highest priority*/
+body {
+    background-color: white;
+}
+
+#del {
+    text-decoration: line-through;
+}
+
+.title {
+    font-weight: bold;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.content {
+    width: 500px;
+    height: auto;
+    border: 1px solid blue;
+}
+
+.keyword {
+    color: green;
+}
+
+.underline {
+    color: red;
+    text-decoration: underline;
+}
+
+</style >

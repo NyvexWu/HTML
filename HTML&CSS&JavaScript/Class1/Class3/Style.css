@@ -1,0 +1,50 @@
+.title
+{
+    font-weight:bold;
+    font-size:30px;
+    text-align:center;
+}
+.desktop{
+    display:block;
+}
+.phone{
+    display:none;
+}
+.list {
+    display: flex;
+    justify-content: center;
+    /*use flex-wrap to fit the website elements*/
+    flex-wrap:wrap;
+}
+.box {
+    /*need to use width to set how many elements in one line when changing the size of the page*/
+    width: 280px;
+    margin: 10px;
+    background-color: red;
+}
+/*CSS media quary*/
+/*this helps us do some quick change in css to help us do some small stuff for the website*/
+@media(max-width: 1215px){
+    .box{
+        width: 45%;
+    }
+    .title{
+        font-size:25px;
+    }
+}
+/*if u want the website to fit the different screen ie. computer, smartphone
+  u will probably use @media multiple times to adjust the amount of elements in one line*/
+@media(max-width: 500px) {
+    .box {
+        width: 90%;
+    }
+    .title{
+        font-size:20px;
+    }
+    .desktop{
+        display: none;
+    }
+    .phone {
+        display: block;
+    }
+}
