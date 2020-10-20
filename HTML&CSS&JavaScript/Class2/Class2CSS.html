@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Class 2 CSS</title>
+    <!--calling style tag from other file-->
+    <!--pros: more organize, easier to edit-->
+    <link rel="stylesheet" type="text/css" href="Style.css"/>
+</head>
+<body>
+    <!--<div> returns a new line, <span> doesnt return new line, both are useful when using CSS-->
+    <!--width and height CSS styling are only applicable to block style tag, ie: div, h3-->
+    <div id="del" class= "title">
+        This is the first title
+    </div>
+    <!--if leave the width untouched it uses the default in the body tag-->
+    <!--unlike width, height changes automatically when there's new element is printing, unless you use declare the height-->
+    <div class= "content">
+        Today's <span class = "underline keyword">weather</span> is pretty nice
+    </div>
+
+    <div class= "title">
+        this is the second title
+    </div>
+    <div class= "content">
+        I <span class= "keyword underline">feel</span> happy
+    </div>
+</body>
+</html>
