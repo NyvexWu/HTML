@@ -1,0 +1,4 @@
+windows:
+npm i -g nodemon
+//check if the software download successfully
+nodemon -v
