@@ -1,0 +1,140 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>Object</title>
+</head>
+<body>
+    <script>
+        /*
+        *Data Type: int, string, boolean
+        Object: is a thing that can use to store some data;
+        **object when by itself is nothing, it is mainly use to store data;
+        */
+        /*
+        How to create a object
+            1. initialize object
+            2. call the object
+        Ways to create object
+            1. using new Object();
+                let temp = new Object();
+                temp.fname = "kevin";
+                temp.lname = "Wu";
+                temp.age = "19";
+                temp.print = function () {
+                    console.log(this.fname, this.lname, this.age);
+                    ("this" points to the binding object of the function)
+                }
+                temp.print();
+                **(output: kevin Wu 19)
+                **(In the Object: {fname: "kevin", lname: "Wu", age: "19", print: ƒ})
+           
+            2. using JSON (javaScript Object Notation)
+                let temp = {fname: "kevin",
+                            lname: "Wu",
+                            age: "19",
+                            print: function(){
+                                       console.log(this.fname, this.lname, this.age);
+                                   }
+                };
+                temp.print();
+                **(output: kevin Wu 19)
+                **(In the Object: {fname: "kevin", lname: "Wu", age: "19", print: ƒ})
+           
+            3. using function()
+                function personalInfo(fname, lname, age){
+                    let temp = new Object();
+                    temp.fname = fname;
+                    temp.lname = lname;
+                    temp.age = age;
+                    temp.print = function () {
+                        console.log(this.fname, this.lname, this.age);
+                    };
+                    return temp;
+                }
+                let person1 = personalInfo("kevin" , "Wu" , 19);
+                let person2 = personalInfo("meng-syuan", "Wu", 18);
+                console.log(person1);
+                console.log(person2);
+
+            4. using constructor
+                function personalInfo(fname, lname, age){
+                    this.fname = fname;
+                    this.lname = lname;
+                    this.age = age;
+                    this.print = function () {
+                        console.log(this.fname, this.lname, this.age);
+                    };
+                    (you dont need to return at the end of the constructor, since constructor will automatically return this after the code)
+                }
+                let person1 = new personalInfo("kevin" , "Wu" , 19);
+                let person2 = new personalInfo("meng-syuan", "Wu", 18);
+                (only thing differ from method 3 is we use create new object instead of just calling the number)
+                console.log(person1);
+                console.log(person2);
+            5. using class
+                class personalInfro
+                {
+                    private:
+                        let fname;
+                        let lname;
+                        let age;
+                    public:
+                        getName(fname, lname)
+                        {
+                            this.fname = fname;
+                            this.lname = lname;
+                        }
+                        getAge(age)
+                        {
+                            this.age = age;
+                        }
+                        printInfo()
+                        {
+                            console.log(fname + " " + lname + " age: " + age);
+                        }
+                }
+        */
+        /*function personalInfo(fname, lname, age) {
+            this.fname = fname;
+            this.lname = lname;
+            this.age = age;
+            this.print = function () {
+                console.log(this.fname, this.lname, this.age);
+            };
+        }
+        let person1 = new personalInfo("kevin", "Wu", 19);
+        let person2 = new personalInfo("meng-syuan", "Wu", 18);
+        console.log(person1);
+        console.log(person2);
+        let sentence;
+        sentence = person1.fname + " and " + person2.fname + " both have " + person1.lname + " as their last name";
+        console.error(sentence);
+        */
+        class personalInfro {
+            private:
+                let fname;
+                let lname;
+                let age;
+            public:
+                getName(fname, lname)
+                {
+                    this.fname = fname;
+                    this.lname = lname;
+                }
+                getAge(age)
+                {
+                    this.age = age;
+                }
+                printInfo()
+                {
+                    console.log(fname + " " + lname + " age: " + age);
+                }
+        }
+        getName("Kevin", "Wu");
+        getAge(19);
+        printInfo();
+    </script>
+</body>
+</html>

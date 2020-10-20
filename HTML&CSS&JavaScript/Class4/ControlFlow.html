@@ -1,0 +1,69 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Control Flow</title>
+</head>
+<body>
+    <script>
+        /*
+        if else statement:
+        (switch is another way to do if else)
+        ex,
+            let num = prompt("enter a number:", "");
+            num = parseInt(num);
+            if (num < 101 && num > 25) {
+                console.log("under 101");
+                if (num < 51) {
+                    console.log("under 51");
+                }
+            }
+            else if (num <= 25)
+            {
+                console.log("under or equal to 25")
+            }
+            else if (num < 250) {
+                console.log("over 100, under 250");
+            }
+            else {
+                console.log("over 249");
+            }
+        */
+        /*
+        loops:
+        while loop
+        ex,
+            -let i = 0;
+             while(i != 10)
+             {
+                 i++;
+                 console.log(i);
+                 (should print out 1-10)
+             }
+            -let i = 0;
+             let sum = 0;
+             while (i != 50) {
+             i++;
+             sum = sum + i;
+             }
+             console.log("sum = " + sum);
+             (should print out "sum = 1275")
+        for loop
+        ex,
+           for(let i = 0; i < 10; i++)
+           {
+                console.log(i+1);
+                (should print out 1-10)
+           }
+        */
+        let i = 0;
+        let sum = 0;
+        while (i != 50) {
+            i++;
+            sum = sum + i;
+        }
+        console.log("sum = " + sum);
+    </script>
+</body>
+</html>
