@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Arrays</title>
+</head>
+<body>
+    <h3>Arrays</h3>
+    <select id="gender">
+        <option value="gender">gender</option>
+        <option value="male">male</option>
+        <option value="female">female</option>
+    </select>
+    <button onclick= "check()">click</button>
+
+    <script>
+        /*
+        //Array is actually an object in javaScript
+        function check() {
+            //creating an Array Object
+            let classSize = parseInt(prompt("Enter the size of your class", ""));
+            let grades = new Array(classSize);
+            for (let i = 0; i < grades.length; i++) {
+                grades[i] = parseInt(prompt("Enter the score of each student", ""));
+            }
+            let sum = 0;
+            for (let i = 0; i < grades.length; i++) {
+                sum = sum + grades[i];
+            }
+            let avg
+            avg = sum / grades.length;
+            console.log(avg);
+        }
+        */
+        function check() {
+            let gender = document.getElementById("gender");
+            console.log(gender.selectedIndex);
+            if (gender.selectedIndex == 0) {
+                window.alert("Didn't choose any gender")
+            }
+            else {
+                let option = gender.options[gender.selectedIndex];
+                console.log(option.value);
+            }
+        }
+    </script>
+</body>
+</html>

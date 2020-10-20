@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Math and String Object</title>
+</head>
+<body>
+    <h3>math and string object</h3>
+    <input type="text" id="text" value="Hello" />
+    <button onclick="check()">click</button>
+    <script>
+        /*
+        Math object
+            few function examples for Math
+                 console.log("PI", Math.PI);
+                 console.log("sqare root", Math.sqrt(3));
+                 console.log("rounding", Math.round(3.5));
+                 console.log("floor", Math.floor(3.999));
+               -special function
+                    -random():
+                        *to control random number between some certian range, you can just multiply it, and use other Math function to round it to integer
+                        *formula for the range of the random function:
+                                *Math.random()*(range min - starting point) + (starting point);
+                        eg,
+                            console.log("rand", Math.random()* 40 +60);
+                        *you can also use random() to calcualte the chance, eg, the chance to perform a critical attack when a player attack
+                        eg,
+                            let att = 10;
+                            if (Math.random() < 0.2) {
+                                att = att * 2;
+                            }
+                            console.log(att);
+        */
+        /*
+        String Object
+            few function examples for String
+                 console.log(s.length);
+                 console.log(s[0]);
+                 console.log("String length:", userInput.length);
+                 console.log("String at 1nd index, which is the 2nd letter of this string:", userInput.charAt(1));
+                 console.log("Change letters to cap:", userInput.toUpperCase());
+                 console.log("get the letter from a certain range, eg from index 1 to 4 excluding the starting and ending index:", userInput.substring(1, 4));
+                 console.log("check if the string contain this letter or phrase, in this case(abc):", userInput.indexOf("abc"));
+                 console.log("check if the string contain this letter or phrase, in this case(llo):", userInput.indexOf("llo"));
+            there are 2 ways to create a string object
+                1. let s = "Hello";
+                2. let s = new String("Hello")+ new String(" ") + new String("World");
+               ** #2 is not suggested to create a string object
+               ** #1 is more prefered  
+            You can use input text box and convert input into a string
+        */
+        function check() {
+            let userInput = document.getElementById("text").value;
+            if (userInput.length == 0) {
+                window.alert("No Input!");
+            }
+            else if (userInput.toUpperCase().indexOf("FUCK") != -1) {
+                window.alert("No cursing!");
+            }
+        }
+    </script>
+</body>
+</html>
